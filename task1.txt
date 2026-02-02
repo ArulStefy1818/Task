@@ -1,0 +1,147 @@
+Section A: Technical Question
+
+1. What is the difference between var, let and const?
+var: Declares variable with function or global scope and allows re-declaration and updates within the same scope.
+let: Declares variable with block scope, allowing updates but not-redeclaration within the same block.
+const: Declares block scoped variables that cannot be reassigned after their initail assignment.
+
+2. Which keyword allows redeclaration and why?
+      var keyword in javaScript allows variable redeclaration within the same scope. It enables this beacuse var variables are function-scoped or globally scoped and are hoisted to the top, allowing the same variable name to be re-initialized without trowing a syntax error. 
+
+3. Which keyword allows reinitialization?
+     var and let allows reinitialization in javaScript.
+
+4. Which keyword does not allow redeclaration and reinitialization?
+     const does not allow redeclaration and reinitialization in javaScript.
+
+5. Why should const be used for fixed values?
+     const means constant- a vlaue that should not change.
+     => If prevents changes by mistake
+     => It makes your code easier to understand
+     => It helps avoid bugs
+
+6. What error occurs when redeclaring a let variable?
+     Syntax error will occurs. let does not allow redeclaration in the same scope.
+
+7. What error occurs when reassigning a const variable?
+     Type error will occurs. const cannot be changed after assignment.
+
+8. Which keyword is preferred in modern JavaScript and why?
+     In mordern JavaScript, the preferred keyword is const.
+     => Prevents accidental changes
+     => Makes code clearer
+     => Helps reduce bugs
+     => Best practice in modern JavaScript
+
+9. Can const be declared without initialization? Explain.
+     No, const cannot be declared without initialization. When you declare a const variable, you must assign a value immediately.This cause an Syntax error.
+
+10. When should var be avoided?
+     => In mordern JavaScript
+     => In large or team project
+     => When writing clean, bugs-free code
+
+Section B: Code-Based Question
+
+11. Predict the output:
+ var a = 10;
+ a = 20;
+ var a = 30;
+ console.log(a);
+
+ Output: 30
+
+ 12. Predict the output:
+ let b = 5;
+ b = 15;
+ console.log(b);
+
+ Output: 15
+
+ 13. Identify the error:
+ let x = 10;
+ let x = 20;
+
+Ans: let does not accept redeclaration in the same scope
+
+
+ 14. Identify the error:
+ const y = 50;
+ y = 100;
+ 
+Ans: const variable cannot be reassigned. Not accept reuse, reinitialization and redeclaration
+
+15. Write a program using var to show redeclaration.
+  var a= 18;
+  a=8
+  var a= 20;
+  console.log(a)
+
+  Output: 20
+
+16. Write a program using let to show reinitialization.
+  let b= 18;
+  b=8;
+  console.log(b)
+
+  Output: 8
+
+17. Write a program using const and explain why value cannot change.
+  const c= 18;
+  console.log(c)
+
+  Output: 18
+  const cannot accept reuse, reinitialization and redeclaration.
+
+18. Convert var to let where applicable.
+  In mordern JavaScript, var should usually be Convert to let because let is safe and more predictable.
+  Convert var to let when the variable is reassigned and does not need function-scope behavior.
+  
+  var x=12;
+  x= 6;
+
+  After converted:
+  let x=12;
+  x=6;
+  
+19. Convert var to const where applicable.
+  use const when the variable value does not change after it's assigned.
+
+  var num=5;
+  console.log(num)
+
+  converted:
+
+  const num=5;
+  console.log(num)
+
+  Do not use const if the value changes
+  var num=4;
+  num= 6;
+
+  converted:
+  const num=6;
+  num=7; //error
+
+20. Write your own example for var, let, and const.
+  var x= 22;
+  x=30;
+  var x=18;
+  console.log("var:",x)
+
+Output: var: 18
+
+  let y=20;
+  y=15;
+  console.log("let:",y)
+
+Output: let: 15
+
+  const z=30;
+  console.log("const:",z)
+
+Output: const: 30
+
+
+
+
